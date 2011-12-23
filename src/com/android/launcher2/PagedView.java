@@ -172,6 +172,9 @@ public abstract class PagedView extends ViewGroup {
     // All syncs and layout passes are deferred until data is ready.
     protected boolean mIsDataReady = false;
 
+    // Clear the furthest (last) page when it dirty
+    protected boolean mClearDirtyPages = false;
+
     // Scrolling indicator
     private ValueAnimator mScrollIndicatorAnimator;
     private ImageView mScrollIndicator;
@@ -1593,7 +1596,7 @@ public abstract class PagedView extends ViewGroup {
                             syncPageItems(i, (i == page) && immediateAndOnly);
                             mDirtyPageContent.set(i, false);
                         }
-                    } else {
+                    } else if (mClearDirtyPages) {
                         if (childCount > 0) {
                             layout.removeAllViewsOnPage();
                         }
