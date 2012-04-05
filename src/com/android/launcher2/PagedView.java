@@ -77,7 +77,7 @@ public abstract class PagedView extends ViewGroup {
     protected int mSnapVelocity = 500;
 
     protected float mDensity;
-    protected float mSmoothingTime;
+   // protected float mSmoothingTime;
     protected float mTouchX;
 
     protected boolean mFirstLayout = true;
@@ -386,7 +386,7 @@ public abstract class PagedView extends ViewGroup {
         }
 
         mTouchX = x;
-        mSmoothingTime = System.nanoTime() / NANOTIME_DIV;
+        //mSmoothingTime = System.nanoTime() / NANOTIME_DIV;
     }
 
     @Override
@@ -1025,7 +1025,7 @@ public abstract class PagedView extends ViewGroup {
                 mLastMotionX = x;
                 mLastMotionXRemainder = 0;
                 mTouchX = mScrollX;
-                mSmoothingTime = System.nanoTime() / NANOTIME_DIV;
+                //mSmoothingTime = System.nanoTime() / NANOTIME_DIV;
                 pageBeginMoving();
             }
             // Either way, cancel any pending longpress
@@ -1170,7 +1170,7 @@ public abstract class PagedView extends ViewGroup {
                 // scrolled position (which is discrete).
                 if (Math.abs(deltaX) >= 1.0f) {
                     mTouchX += deltaX;
-                    mSmoothingTime = System.nanoTime() / NANOTIME_DIV;
+                  //  mSmoothingTime = System.nanoTime() / NANOTIME_DIV;
                     if (!mDeferScrollUpdate) {
                         scrollBy((int) deltaX, 0);
                         if (DEBUG) Log.d(TAG, "onTouchEvent().Scrolling: " + deltaX);
