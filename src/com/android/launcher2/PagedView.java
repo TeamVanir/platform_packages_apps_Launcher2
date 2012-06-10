@@ -68,13 +68,13 @@ public abstract class PagedView extends ViewGroup {
     private static final float OVERSCROLL_ACCELERATE_FACTOR = 2;
     private static final float OVERSCROLL_DAMP_FACTOR = 0.14f;
     private static final int MINIMUM_SNAP_VELOCITY = 2200;
-    private static final int MIN_FLING_VELOCITY = 250;
-    private static final float RETURN_TO_ORIGINAL_PAGE_THRESHOLD = 0.33f;
+    private static final int MIN_FLING_VELOCITY = 100;
+    private static final float RETURN_TO_ORIGINAL_PAGE_THRESHOLD = 0.30f;
     // The page is moved more than halfway, automatically move to the next page on touch up.
-    private static final float SIGNIFICANT_MOVE_THRESHOLD = 0.4f;
+    private static final float SIGNIFICANT_MOVE_THRESHOLD = 0.375f;
 
     // the velocity at which a fling gesture will cause us to snap to the next page
-    protected int mSnapVelocity = 500;
+    protected int mSnapVelocity = 75;
 
     protected float mDensity;
    // protected float mSmoothingTime;

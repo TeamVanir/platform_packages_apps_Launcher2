@@ -409,7 +409,7 @@ public class Workspace extends PagedView
             }
         };
 
-        mSnapVelocity = 600;
+        mSnapVelocity = 80;
         mWallpaperOffset = new WallpaperOffsetInterpolator();
         Display display = mLauncher.getWindowManager().getDefaultDisplay();
         mDisplayWidth = display.getWidth();
