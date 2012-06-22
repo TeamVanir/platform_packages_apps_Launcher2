@@ -62,13 +62,13 @@ public abstract class PagedView extends ViewGroup {
     // the min drag distance for a fling to register, to prevent random page shifts
     private static final int MIN_LENGTH_FOR_FLING = 25;
 
-    private static final int PAGE_SNAP_ANIMATION_DURATION = 550;
+    private static final int PAGE_SNAP_ANIMATION_DURATION = 120;
     protected static final float NANOTIME_DIV = 1000000000.0f;
 
     private static final float OVERSCROLL_ACCELERATE_FACTOR = 2;
     private static final float OVERSCROLL_DAMP_FACTOR = 0.14f;
-    private static final int MINIMUM_SNAP_VELOCITY = 2200;
-    private static final int MIN_FLING_VELOCITY = 100;
+    private static final int MINIMUM_SNAP_VELOCITY = 2500;
+    private static final int MIN_FLING_VELOCITY = 200;
     private static final float RETURN_TO_ORIGINAL_PAGE_THRESHOLD = 0.30f;
     // The page is moved more than halfway, automatically move to the next page on touch up.
     private static final float SIGNIFICANT_MOVE_THRESHOLD = 0.375f;
@@ -181,9 +181,9 @@ public abstract class PagedView extends ViewGroup {
     private int mScrollIndicatorPaddingLeft;
     private int mScrollIndicatorPaddingRight;
     private boolean mHasScrollIndicator = true;
-    protected static final int sScrollIndicatorFadeInDuration = 150;
+    protected static final int sScrollIndicatorFadeInDuration = 100;
     protected static final int sScrollIndicatorFadeOutDuration = 650;
-    protected static final int sScrollIndicatorFlashDuration = 650;
+    protected static final int sScrollIndicatorFlashDuration = 400;
 
     // If set, will defer loading associated pages until the scrolling settles
     private boolean mDeferLoadAssociatedPagesUntilScrollCompletes;
